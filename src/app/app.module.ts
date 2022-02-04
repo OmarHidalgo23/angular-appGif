@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { GifsModule } from './gifs/gifs.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule, //Para usar peticiones HTTP con el mismo ángular
+    SharedModule,
+    GifsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
